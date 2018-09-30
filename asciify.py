@@ -57,7 +57,7 @@ method runner():
     - handles exceptions as well
     - provides alternative output options
 '''
-def runner(path,revert_colors = False,pixel_per_line=100):
+def runner(path, revert_colors = False, ascii_char_per_line=100):
     
     if revert_colors:
         global ASCII_CHARS
@@ -71,7 +71,7 @@ def runner(path,revert_colors = False,pixel_per_line=100):
         print("Unable to find image in",path)
         #print(e)
         return
-    image = do(image,pixel_per_line)
+    image = do(image,ascii_char_per_line)
 
     # To print on console
     # print(image)
